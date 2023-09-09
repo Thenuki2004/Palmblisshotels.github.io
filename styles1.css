@@ -1,0 +1,1774 @@
+/*Homepage styling begins*/
+body{
+    background-color:#c5c7c8;
+    font-family:"Trirong", serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    width: 100%;
+    height: 100%;
+}
+a{
+    color:#F0F0F0;
+    text-decoration:none;
+}
+ul{
+    list-style:none;
+    font-size:2.5vmin;
+}
+.active a{
+    color:#1c1c1d;
+    font-weight:bold;
+    text-decoration:underline;
+}
+.dropdown{
+    position:relative;
+}
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    min-width:160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.6);
+    z-index:1;
+}
+.dropdown-content li{
+    padding:12px 16px;
+}
+.dropdown-content li a{
+    color:#F0F0F0;
+    text-decoration:none;
+    display:block;
+}
+.dropdown-content li a:hover{
+    background-color:#27282901;
+}
+.nav-links .dropdown > a {
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-links .dropdown > a:after {
+    content: "\25BE"; /* Unicode code for downward-pointing triangle */
+    margin-left: 5px;
+}
+.navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    width:100%;
+    justify-content:space-between;
+    padding:20px;
+    color:#F0F0F0;
+    margin-left: -8px;
+}
+.nav-links{
+    display:flex;
+    align-items:center;;
+    cursor: pointer;
+}
+.nav-links li{
+    margin: 0 30px;
+    flex-grow:1;
+    width:calc(25%-.2em);
+}
+header{
+    width:100vw;
+    height:100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url('Images-Homepage/Cover1.jpg');
+    background-position:bottom;
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.header-information{
+    margin-bottom:150px;
+    color:#F0F0F0;
+    text-align:center;
+}
+.header-information h2{
+    text-decoration: none;
+    font-size:4vmin;
+    color:#F0F0F0;
+}
+.H1{
+    width:150px;
+    height:4px;
+    background:#331D2C;
+    margin:10px auto;
+    border-radius:5px;
+}
+.header-information h1{
+    font-size:7vmin;
+    margin-top:50px;
+    margin-bottom:30px;
+}
+.ctn{
+    padding:8px 15px;
+    background:#272829;
+    border-radius:30px;
+    color:#F5F5F5;
+}
+button{/*Common button*/
+    display:inline-block;
+    background-color:#272829;
+    border:none;
+    padding:8px 15px;
+    width:200px;
+    color:#F5F5F5;
+    text-align:center;
+}
+/*Welcome banner styling begins*/
+section{
+    width:80%;
+    margin:80px auto;
+}
+.title{
+    text-align:center;
+    font-size:4vmin;
+    color:rgba(12, 12, 12, 0.764);
+}
+.row{
+    display:flex;
+    align-items:center;
+    width:100%;
+    justify-content:space-between;
+}
+.row.col{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.row.col img{
+    width:80%;
+}
+.img-responsive {
+    max-width:100%;
+    height:auto;
+}
+/*Dining banner styling begins*/
+.Dining{
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url('Images-Homepage/Dining.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+}
+.Dining-content{
+    width:50%;
+    padding:40px;
+    color:#F5F5F5;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+.Dining-content h1{
+    font-size: 7vmin;
+    margin-bottom:50px;
+}
+.Dining-content p{
+    font-size:3vmin;
+    font-style: italic;
+    color:#F5F5F5;
+    line-height:1.6;
+}
+.dining-button{
+    display:inline-block;
+    background-color:#272829;
+    border:none;
+    padding:8px 15px;
+    width:200px;
+    color:#F5F5F5;
+    text-align:center;
+}
+/*Animation (Gallery) styling begins*/
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.H2{
+    width:100px;
+    height:4px;
+    background:#331D2C;
+    margin:10px auto;
+    border-radius:5px;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeAnimation 16s;
+}
+.slide:nth-child(1) {
+    background-image: url('Images-Homepage/Poolarea.jpg');
+    animation-delay: 0s; /*Defines when each slide starts its animation*/
+    animation-duration: 16s; /* Total duration */
+    opacity:1;/*to make sure that the picture will be fixed, after the animation ends*/
+}
+
+.slide:nth-child(2) {
+    background-image: url('Images-Homepage/Restaurant.jpg');
+    animation-delay: 4s; /* One-fourth of the total duration */
+    animation-duration: 16s;
+}
+
+.slide:nth-child(3) {
+    background-image: url('Images-Homepage/Outside.jpg');
+    animation-delay: 8s; /* Half of the total duration */
+    animation-duration: 16s;
+}
+
+.slide:nth-child(4) {
+    background-image: url('Images-Homepage/Bedroom.jpg');
+    animation-delay: 12s; /* Three-fourths of the total duration */
+    animation-duration: 16s;
+}
+.galleria-button{
+    display:inline-block;
+    background-color:#272829;
+    border:none;
+    padding:8px 15px;
+    width:200px;
+    color:#F5F5F5;
+    text-align:center;
+}
+@keyframes fadeAnimation {
+    0%,/*start*/ 100%/*end*/ { /*Make the animation invisible*/
+        opacity: 0;
+    }
+    25%, 75% { /*Make the animation visible*/
+        opacity: 1;
+    }
+}
+/*Unorederd and Ordered lists styling begins*/
+.UL1 {
+    font-style: italic;
+    margin-top:30px;
+    font-size:25px;
+    color:#4d4e4f;
+    margin-left: 20px;
+    list-style-type: circle;
+}
+.spa-packages{
+    font-size:24px;
+}
+.h3-underline {
+    width: 100px;
+    height: 2px;
+    background: #331D2C;
+    margin: 10px 0;
+    border:none;
+}
+ol {
+    font-style: italic;
+    margin-top:20px;
+    margin-bottom:30px;
+    font-size:23px;
+    font-style: italic;
+    color: #272829;
+    margin-left: 20px;
+    margin-left: 30px; 
+}
+li {
+    margin-bottom: 8px;
+}
+.Explore-Amenities{
+    text-align:center;
+    font-size:4vmin;
+    color:rgba(12, 12, 12, 0.764);
+    margin-bottom: 30px;
+}
+.title-underline {
+    width: 250px;
+    height: 4px;
+    background: #331D2C;
+    margin: 10px auto;
+    border-radius:5px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px; 
+    width: 1150px;
+    margin: 0 auto;
+}
+.list-image {
+    margin-top: 40px;
+    width: 600px;
+    height:400px;
+    margin-left: 40px;
+    transition: transform 0.3s;
+}
+/* Add a hover effect to the image */
+.list-image:hover {
+    transform: scale(1.1); /* Increase the image size on hover */
+}
+.small-button {
+    display:inline-block;
+    background-color:#272829;
+    border:none;
+    padding:8px 15px;
+    width:200px;
+    color:#F5F5F5;
+    text-align:center;
+}
+/*Adventures section styling begins*/
+.content-col{
+    width:40%;   
+}
+.content-col h1{
+    font-size: 7vmin;
+    color:rgba(12, 12, 12, 0.764);
+}
+.image.col{
+    width:60%;
+    align-items:center;
+}
+.H3{
+    width:175px;
+    height:4px;
+    background:#331D2C;
+    margin:50px auto;
+    border-radius:5px;
+    margin-left:-1px;
+}
+.row1{
+    display:flex;
+    height:88%;
+    align-items:center;
+}
+.img-diving {
+    max-width:100%;
+    height:auto;
+}
+.col1{
+    flex-basis:50%;  
+}
+.adventures-button{
+    display:inline-block;
+    background-color:#272829;
+    border:none;
+    padding:8px 15px;
+    width:200px;
+    color:#F5F5F5;
+    text-align:center;
+}
+/*Ocations banner styling begins*/
+.Ocations{
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url('Images-Homepage/Wedding1.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+}
+.Ocations-content{
+    width:50%;
+    padding:40px;
+    color:#F5F5F5;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+.Ocations-content h1{
+    font-size: 7vmin;
+    margin-bottom:50px;
+}
+.Ocations-content p{
+    line-height:1.6;
+    font-size:3vmin;
+    font-style: italic;
+    color:#F5F5F5;
+}
+/*Branches section styling begins*/
+.Branches h1{
+    color:rgba(12, 12, 12, 0.764);
+    font-size:7vmin;
+}
+.Branches p{
+    color:#272829;
+    font-size:2.5vmin;
+    line-height:1.6;
+}
+.card{
+    width:200px;
+    height:230px;
+    display:inline-block;
+    padding:15px 25px;
+    box-sizing:border-box;
+    margin: 10px 15px;
+    background-position:center;
+    background-size:cover;
+}
+.H4{
+    width:150px;
+    height:4px;
+    background:#331D2C;
+    margin:50px auto;
+    border-radius:5px;
+    margin-left:-1px;
+}
+.card h5{
+    color:rgba(12, 12, 12, 0.764);
+}
+.card1{
+    background-image:url(Images-Homepage/Branch1.jpg);
+}
+.card2{
+    background-image:url(Images-Homepage/Branch2.jpeg);
+}
+.card3{
+    background-image:url(Images-Homepage/Branch3.jpeg);
+}
+.card4{
+    background-image:url(Images-Homepage/Branch4.jpg);
+}
+.card5{
+    background-image:url(Images-Homepage/Branch5.jpg);
+}
+.card6{
+    background-image:url(Images-Homepage/Branch6.jpg);
+}
+.branches-button {
+    display:inline-block;
+    background-color:#272829;
+    border:none;
+    padding:8px 15px;
+    width:200px;
+    color:#F5F5F5;
+    text-align:center;
+}
+/*Google map section's styling begins*/
+.journey-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.journey-text {
+    flex: 1;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.journey-text h1 {
+    font-size: 2.5rem;
+    color:rgba(12, 12, 12, 0.764);
+    margin-bottom: 20px;
+}
+.H16{
+    width: 150px;
+    height: 4px;
+    background: #331D2C;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.journey-text p {
+    font-size:2.5vmin;
+    line-height:2;
+    color:#272829;
+}
+.google-map {
+    flex: 1;
+    max-width: 50%;
+    position: relative; /* Required for absolute positioning of gradient */
+    overflow: hidden;
+}
+
+.google-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/*Home page's styling ends*/
+
+/*Branches page styling begins*/
+.menubar {
+    background-color: #272829;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.logo {
+    color: #F0F0F0;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.menubar ul {
+    list-style: none;
+    display: flex;
+}
+.menubar ul li {
+    padding: 10px 20px;
+    position:relative;
+}
+
+.menubar ul li a {
+    color: #F0F0F0;
+    text-decoration: none;
+    font-size: 18px;
+}
+.menubar ul li.active a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.menubar ul li.active .dropdown-menu ul li a.inactive {
+    color:#F0F0F0;
+    text-decoration: none;
+    font-weight: normal;
+}
+.dropdown-menu{
+    display:none;
+    z-index: 2;
+}
+.menubar ul li:hover .dropdown-menu{
+    display:block;
+    position:absolute;
+    left:0;
+    top:100%;
+    background-color: #272829;
+}
+.dropdown-menu ul{
+    display:block;
+    margin:10px;
+}
+.dropdown-menu ul li{
+    width:150px;
+    padding:10px;
+}
+/*Main banner and introduction section's styling begins*/
+.title3{
+    text-align:center;
+    font-size:5vmin;
+    color:rgba(12, 12, 12, 0.764);
+}
+.H5{
+    width:200px;
+    height:4px;
+    background:#331D2C;
+    margin:10px auto;
+    border-radius:5px;
+}
+.image-container {
+    text-align: center;
+}
+.image1 {
+    max-width:100%;
+    height:auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+.image-text{
+    display:inline-block;
+    width:1200px;
+    margin-top:10px;
+    font-size:25px;
+    color:#272829;
+    text-align:left;
+    line-height:2;
+}
+.image-text p{
+    margin-top:7px;
+    font-style:italic;
+}
+/*Styling for the branches table begins*/
+.branch-table {
+    margin:0 auto;
+    width:80%;
+    border-collapse: collapse;
+    border: 1px solid #4d4e4f;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+.branch-table th, .branch-table td {
+    border: 1px solid #4d4e4f;
+    padding: 8px;
+    text-align: center;
+}
+.branch-table th {
+    background-color:#272829;
+    color:#F0F0F0;
+    font-size:15px;
+}
+.branch-table img {
+    width:100%;
+    height:auto;
+}
+.branch-table iframe {
+    width:100%;
+    height:auto;
+    border: none;
+}
+.branch-column{
+    width:30.3%;
+}
+.description-column{
+    width:33.3%;
+    height: auto;
+    text-align:left;
+    vertical-align:top;
+    line-height:1.6;
+    font-style:italic;
+}
+.location-column{
+    width:33.3%;
+}
+.branch-table tfoot td {
+    text-align: center;
+    font-style: italic;
+    padding: 10px;
+    background-color:#272829;
+    border-top: 1px solid #4d4e4f;
+    color:#F0F0F0;
+    font-size: 14px;
+}
+/*Branches page's styling ends*/
+
+/*Adventures page's styling begins*/
+.title4{
+    text-align:center;
+    font-size:4vmin;
+    color:rgba(12, 12, 12, 0.764);
+    margin-bottom:90px;
+}
+.H7{
+    width:150px;
+    height:4px;
+    background:#331D2C;
+    margin:10px auto;
+    border-radius:5px;
+}
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.text-container {
+    flex: 1;
+    padding: 0 20px;
+    margin-bottom:50px;
+}
+.text-container h1 {
+    font-size:40px;
+    color:#272829;
+    margin-bottom: 10px;
+}
+.H8{
+    width:150px;
+    height:4px;
+    background:#331D2C;
+    margin:50px auto;
+    border-radius:5px;
+    margin-left:-1px;
+}
+.text-container p {
+    font-style: italic;
+    font-size: 20px;
+    line-height:1.5;
+}
+.content-container img {
+    max-width: 50%;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+.content-container-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top:50px;
+}
+.text-container-right {
+    margin-left: 20px;
+    text-align: left;
+}
+.text-container-right h1 {
+    font-size: 40px;
+    color:#272829;
+    margin-bottom: 10px;
+}
+.H9{
+    width:175px;
+    height:4px;
+    background:#331D2C;
+    margin:50px auto;
+    border-radius:5px;
+    margin-left:-1px;
+}
+.text-container-right p {
+    font-size: 20px;
+    line-height:1.5;
+    font-style:italic;
+    color:#272829;
+}
+.content-container-right img {
+    max-width: 50%;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+.content-container3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top:50px;
+}
+.text-container3 {
+    flex: 1;
+    padding: 0 20px;
+}
+.text-container3 h1 {
+    font-size:40px;
+    color:#272829;
+    margin-bottom: 10px;
+}
+.H10{
+    width:220px;
+    height:4px;
+    background:#331D2C;
+    margin:50px auto;
+    border-radius:5px;
+    margin-left:-1px;
+}
+.text-container3 p {
+    font-style: italic;
+    font-size: 20px;
+    line-height:1.5;
+}
+.content-container3 img {
+    max-width: 50%;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+.content-container-right1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top:50px;
+}
+.text-container-right1 {
+    margin-left: 20px;
+    text-align: left;
+}
+.text-container-right1 h1 {
+    font-size:40px;
+    color:#272829;
+    margin-bottom: 10px;
+}
+.H11{
+    width:220px;
+    height:4px;
+    background:#331D2C;
+    margin:50px auto;
+    border-radius:5px;
+    margin-left:-1px;
+}
+.text-container-right1 p {
+    font-size: 20px;
+    line-height:1.5;
+    font-style:italic;
+    color:#272829;
+}
+.content-container-right1 img {
+    max-width: 50%;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+.content-container4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+    margin-top:50px;
+}
+.text-container4 {
+    flex: 1;
+    padding: 0 20px;
+}
+.text-container4 h1 {
+    font-size:40px;
+    color:#272829;
+    margin-bottom: 10px;
+}
+.H12{
+    width:290px;
+    height:4px;
+    background:#331D2C;
+    margin:50px auto;
+    border-radius:5px;
+    margin-left:-1px;
+}
+.text-container4 p {
+    font-style: italic;
+    font-size: 20px;
+    line-height:1.5;
+}
+.content-container4 img {
+    max-width: 50%;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+/*Google map's styling starts*/
+.come-find-us {
+    text-align: center;
+    margin-top: 50px;
+}
+.come-find-us h1 {
+    font-size: 2.5rem;
+    color:#4d4e4f;
+}
+.google-map {
+    margin-top: 20px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.google-map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+/*Adventures page's styling ends*/
+
+/*Restaurants page's styling starts*/
+.H15{
+    width:150px;
+    height:4px;
+    background:#331D2C;
+    margin:10px auto;
+    border-radius:5px;
+}
+.section{
+    width:80%;
+    margin:80px auto;
+}
+.title5{
+    text-align:center;
+    font-size:4vmin;
+    color:rgba(12, 12, 12, 0.764);
+}
+.H13{
+    width:100px;
+    height:4px;
+    background:#331D2C;
+    margin:10px auto;
+    border-radius:5px;
+}
+.row4{
+    display:flex;
+    align-items:center;
+    width:100%;
+    justify-content:space-between;
+    margin:0 -20px;
+}
+.col4{
+    width:calc(50%-20%);
+    margin:0 20px;
+}
+.row4 .col4{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.row4 .col4 img{
+    width:600px;
+    height:500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+.Restaurants1 .row4{
+    margin-top:50px;
+}
+.Cuisine1{
+    font-size:3vmin;
+    color:#272829;
+    margin:20px auto;
+}
+.Cuisine-info1{
+    color:#272829;
+    font-size:2.5vmin;
+    line-height:1.6;
+    font-style:italic;
+    padding:0px 40px;
+}
+.Restaurants1 .button{
+    margin-top:30px;
+}
+.section{
+    width:80%;
+    margin:80px auto;
+}
+.title6{
+    margin-top:100px;
+    text-align:center;
+    font-size:4vmin;
+    color:rgba(12, 12, 12, 0.764);
+}
+.H14{
+    width:150px;
+    height:4px;
+    background:#331D2C;
+    margin:10px auto;
+    border-radius:5px;
+}
+.row5{
+    align-items:center;
+    width:100%;
+    justify-content:space-between;
+}
+.Restaurants2 .row5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 -20px;
+}
+.Restaurants2 .col5 {
+    width: calc(50% - 10px);
+    margin: 0 20px;
+}
+.row5 .col5{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.row5 .col5 img{
+    margin-top:50px;
+    width:600px;
+    height:500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+.Restaurants2 .row5{
+    margin-top:50px;
+}
+.Cuisine2{
+    font-size:3vmin;
+    color:#272829;
+    margin:20px auto;
+}
+.Cuisine-info2{
+    color:#272829;
+    font-size:2.5vmin;
+    line-height:1.6;
+    font-style:italic;
+    padding:0px 40px;
+}
+.Restaurants2 .button{
+    margin-top:30px;
+}
+/*Events' banners' styling starts*/
+.container2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.Ocations2{
+    margin-top:50px;
+    width:90%;
+    height:90vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('Images-Restaurants/Weddings2.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+}
+.Ocations-content2{
+    width:50%;
+    padding:40px;
+    color:#F5F5F5;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+.Ocations-content2 h1{
+    font-size: 7vmin;
+    margin-bottom:50px;
+}
+.Ocations-content2 p{
+    font-size:3vmin;
+    font-style: italic;
+    line-height:2;
+    color:#F5F5F5;
+}
+.container3 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+}
+.Ocations3{
+    margin-top:50px;
+    width:90%;
+    height:90vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url('Images-Restaurants/Conferences2.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+}
+.Ocations-content3{
+    width:50%;
+    padding:40px;
+    color:#F5F5F5;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+.Ocations-content3 h1{
+    font-size: 7vmin;
+    margin-bottom:50px;
+}
+.Ocations-content3 p{
+    font-size:3vmin;
+    font-style:italic;
+    color:#F5F5F5;
+    line-height:2;
+}
+/*Restaurants page's styling ends*/
+
+/*Booking page's styling begins*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f0f0f0;
+}
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: 60px;
+    margin-right:60px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow:hidden;
+    overflow: auto;
+}
+legend {
+    font-size: 30px;
+    font-weight: bold;
+    color: #4d4e4f;
+}
+label {
+    display: block;
+    color: #272829;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.date-container {
+    align-items: center;
+}
+.date-field {
+    margin-bottom: 10px;
+}
+input[type="date"] {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+input[type="submit"] {
+    background-color: #272829;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #4d4e4f;
+}
+select option {
+    padding: 10px;
+}
+.adventures-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+}
+.adventure-option {
+    display: flex;
+    align-items: center;
+    margin-right:10px;
+    margin-left: 5px;
+}
+/* Styles for background and content containers */
+.background-container1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.background-image1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Images-Booking/Background.jpg') center/cover no-repeat;
+    z-index: 0;
+}
+.content-container {
+    position: relative;
+    z-index: 1;
+}
+/*Footer area's styling begins*/
+.footer{
+    background:#272829;
+    color:#F0F0F0;
+    padding:20px;
+    text-align:center;
+}
+.branches-page .footer {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+}
+.footer-content{
+    max-width:800px;
+    margin:0 auto;
+    padding:0px 10px;
+}
+.footer-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+.footer-column{
+    flex-basis:40%;
+    text-align:left;
+    margin:0 10px;
+}
+.footer h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+.footer p{
+    font-size:14px;
+    line-height:1.5;
+}
+.footer i{
+    font-size:24px;
+    margin-right:5px;
+}
+.footer a{
+    color:#F0F0F0;
+    text-decoration:none;
+}
+/* Media query for screens with a width of less than 800px */
+@media screen and (max-width: 800px) {
+    /*Home page's styling begins*/
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+    }
+    .dropdown-content {
+        min-width: 100%;
+        position: static;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
+    }
+    .nav-links li {
+        display: block;
+        margin: 0 8px;
+    }
+    .nav-links li a {
+        font-size: 11.5px;
+    }
+    .header-information {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    /*Welcome banner's styling begins*/
+    .section,
+    section {
+        width: 90%;
+        margin: 40px auto;
+    }
+    .title {
+        font-size: 3vmin;
+        text-align:center;
+        color: rgba(12, 12, 12, 0.764);
+    }
+    .row,
+    .row.col {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .row.col img {
+        width: 60%;
+        height: auto;
+    }
+    /*Dining banner's styling begins*/
+    .Dining {
+        height: auto;
+        background-size: cover;
+    }
+    .Dining-content {
+        width: 80%;
+        padding: 20px;
+    }
+    .Dining-content h1 {
+        font-size: 5vmin;
+        margin-bottom: 30px;
+    }
+    .Dining-content p {
+        font-size: 3vmin;
+        white-space: normal;
+    }
+    button {
+        width: 150px;
+        padding: 6px 12px;
+    }
+    /*Animation's styling begins*/
+    .slideshow-container {
+        height: 50vh;
+    }
+    .H2 {
+        width: 60px;
+        height: 2px;
+    }
+    .slide {
+        width: 100%;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        animation: fadeAnimation 16s;
+    }
+    .slide:nth-child(1) {
+        background-image: url('Images-Homepage/Poolarea.jpg');
+        animation-delay: 0s;
+    }
+    .slide:nth-child(2) {
+        background-image: url('Images-Homepage/Restaurant.jpg');
+        animation-delay: 4s;
+    }
+    
+    .slide:nth-child(3) {
+        background-image: url('Images-Homepage/Outside.jpg');
+        animation-delay: 8s;
+    }
+    .slide:nth-child(4) {
+        background-image: url('Images-Homepage/Bedroom.jpg');
+        animation-delay: 12s;
+    }
+    .galleria-button {
+        font-size: 12px;
+        padding: 5px 10px;
+        display:inline-block;
+        width:150px;
+    }
+    /*Unordered and Ordered lists' styling begins*/
+    .UL1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .spa-packages {
+        font-size: 18px;
+    }
+    .h3-underline {
+        width: 80px;
+        height: 2px;
+        margin: 8px 0;
+    }
+    ol {
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .Explore-Amenities {
+        font-size: 3vmin;
+        margin-bottom: 20px;
+    }
+    .title-underline {
+        width: 150px;
+        height: 3px;
+        margin: 8px auto;
+    }
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+    .list-image {
+        margin-top: 20px;
+        width: 50%;
+        height: auto;
+        margin-left: 0;
+        transition: transform 0.3s;
+    }
+    /* Add a hover effect to the image */
+    .list-image:hover {
+        transform: scale(1.1);
+    }
+    .small-button {
+        font-size: 12px;
+        padding: 5px 10px;
+        display:inline-block;
+        width:150px;
+    }
+    /*Adventures section's styling begins*/
+    .content-col h1 {
+        font-size: 5vmin;
+    }
+        .content-col {
+            width: 80%;
+        }
+        .content-col h1 {
+            font-size: 5vmin;
+        }
+        .image.col {
+            width: 20%;
+        }
+        .H3 {
+            width: 120px;
+            margin: 30px auto;
+            margin-left: 5px;
+        }
+        .row1 {
+            height: auto; 
+        }
+        .img-diving {
+            margin-top:40px;
+            max-width: 100%;
+            height:auto;
+        }
+        .adventures-button {
+            font-size: 12px; /* Adjust the font size for smaller screens */
+            padding: 5px 10px; /* Adjust the padding as needed */
+            display:inline-block;
+            width:125px;
+        }
+        /*Ocations banner's styling begins*/
+        .Ocations {
+            height: auto;
+            background-size: cover;
+        }
+        .Ocations-content {
+            width: 80%;
+            padding: 20px;
+        }
+        .Ocations-content h1 {
+            font-size: 5vmin;
+            margin-bottom: 30px;
+        }
+        .Ocations-content p {
+            font-size: 3vmin;
+            white-space: normal;
+        }
+        .dining-button {
+            font-size: 12px;
+            padding: 5px 10px;
+            display:inline-block;
+            width:150px;
+        }
+        /*Branches section's styling begins*/
+        .Branches h1 {
+            font-size: 5vmin;
+        }
+        .Branches p {
+            font-size: 3vmin;
+        }
+        .card {
+            width: 150px;
+            height: 180px; 
+            padding: 10px 15px; 
+            margin: 10px 10px;
+        }    
+        .H4 {
+            width: 100px; 
+            margin: 20px auto; 
+        }
+        .card h5 {
+            font-size: 3vmin; 
+        }
+        /*Google map's styling begins*/
+        .journey-section {
+            flex-direction: column; 
+            align-items: center; 
+            margin-top: 20px;
+        }   
+        .journey-text {
+            flex: 1;
+            padding-left: 0;
+            text-align: center;
+        }
+    
+        .journey-text h1 {
+            font-size: 5vmin;
+            margin-bottom: 10px;
+        }
+        .H16 {
+            width: 100px;
+            margin: 0 auto;
+        }
+        .journey-text p {
+            font-size: 3vmin;
+            line-height: 1.5;
+        }
+        .google-map {
+            max-width: 100%;
+        }
+        .branches-button {
+            font-size: 12px;
+            padding: 5px 10px;
+            display:inline-block;
+            width:150px;
+        }
+        /*Footer area's styling begins*/
+        .footer-content {
+            max-width: 100%;
+            padding: 0 20px;
+        } 
+        .footer-row {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }    
+        .footer-column {
+            flex-basis: 100%;
+            text-align: center;
+            margin: 10px;
+        }
+        .footer h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .footer p {
+            font-size: 12px;
+            line-height: 1.4; 
+        }
+        .footer i {
+            font-size: 20px;
+            margin-right: 5px;
+        } 
+        /*Home page's styling ends*/
+
+        /*Branches page's styling begins*/
+         .menubar {
+                height: auto;
+                flex-direction: row;
+                padding: 20px;
+            }
+        .logo {
+                margin-right: 5px;
+                margin-bottom: 10px;
+            }
+        .menubar ul {
+                flex-direction: row;
+                align-items: center;
+            }
+            .menubar ul li {
+                padding: 10px 12px;
+                text-align: center;
+                position: relative;
+                margin: 0 -5px;
+            }
+            .menubar ul li a {
+                font-size: 11.5px;
+            }  
+            .dropdown-menu ul li {
+                display: flex; /*flexbox to align text and icon horizontally */
+                align-items: center;
+                justify-content: space-between; /* Push the icon to the right */
+                width: 100%; /* Make the dropdown items full width */
+                padding: 10px;
+                text-align: center;
+            }
+            /*Main banner and introduction's styling begins*/
+            .title3 {
+                font-size: 4vmin;
+            }
+            .image-text {
+                width: 98%;
+                font-size:25px;
+                text-align: left; 
+                line-height: 1.5; 
+                padding: 0 10px; 
+            }
+            .image-text p {
+                margin-top: 7px;
+                font-style: italic;
+                font-size: 14px; 
+            }
+            /*branches table's styling begins*/
+            .branch-table {
+                width: 100%;
+                margin-top: 20px;
+                padding-top: 20px;
+            }
+            .branch-table th {
+                font-size: 14px;
+            }
+            .branch-table img {
+                width: 100px;
+                height:80px;
+            }
+            .description-column {
+                width: 33.3%;
+                font-size: 14px;
+                text-align: left;
+                line-height: 1.5;
+            }      
+            .branch-table tfoot td {
+                font-size: 14px;
+                padding: 5px;
+            }
+            /*Branchres page's styling ends*/
+
+
+            /*Adventures page's styling begins*/
+            .title4 {
+                margin-top: 20px;
+                font-size: 3.5vmin;
+                margin-bottom: 60px;
+            }
+            .H7,
+            .H8,
+            .H9,
+            .H10,
+            .H11,
+            .H12 {
+                width: 100px;
+            }     
+            .text-container h1,
+            .text-container-right h1,
+            .text-container3 h1,
+            .text-container-right1 h1,
+            .text-container4 h1 {
+                font-size: 24px;
+            }
+            .text-container p,
+            .text-container-right p,
+            .text-container3 p,
+            .text-container-right1 p,
+            .text-container4 p {
+                font-size: 16px;
+            }
+            /*Google map's styling begins*/
+            .come-find-us {
+                margin-top: 30px;
+            }
+            .come-find-us h1 {
+                font-size: 2rem; 
+            }
+            .google-map {
+                margin-top: 10px;
+            }
+            .google-map iframe {
+                height: 300px;
+            }
+            /*Adventures page's styling ends*/
+
+            /*Restaurants page's stylung begins*/
+            .section {
+                width: 80%;
+                margin: 80px auto;
+            }
+            .title5,
+            .title6 {
+                text-align: center;
+                font-size: 4vmin;
+                color: rgba(12, 12, 12, 0.764);
+            }
+            .H13,
+            .H14 {
+                width: 100px;
+                height: 4px;
+                background: #331D2C;
+                margin: 10px auto;
+                border-radius: 5px;
+            }
+            .Restaurants1 .row4 {
+                flex-direction: column;
+                align-items: center;
+                margin-left:1px;
+            }
+            .Restaurants1 .col4 {
+                width: 100%;
+                margin: 0;
+            }
+            .row4 .col4 img {
+                margin-top: 20px;
+                width: 90%;
+                max-width: 100%;
+                height:90%;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+            }
+            .Cuisine1 {
+                font-size: 4vmin;
+                color: #272829;
+                margin: 10px auto;
+            }
+            .Cuisine-info1 {
+                color: #272829;
+                font-size: 3vmin;
+                line-height: 1.6;
+                font-style: italic;
+                padding: 0px 20px; 
+            }
+            .cuisine-button1 {
+                margin-top: 20px; 
+                font-size: 12px;
+                padding: 5px 10px;
+                display:inline-block;
+                width:200px;
+            }
+            .Restaurants2 .row5 {
+                flex-direction: column; 
+                align-items: center; 
+                margin-left:1px;
+            }
+            .Restaurants2 .col5 {
+                width: 100%; 
+                margin: 0;
+            }
+            .row5 .col5 img {
+                margin-top: 20px;
+                width: 90%; 
+                max-width: 100%;
+                height: 90%;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+            }
+            .Cuisine2 {
+                font-size: 4vmin;
+                color: #272829;
+                margin: 10px auto; 
+            }
+            .Cuisine-info2 {
+                color: #272829;
+                font-size: 3vmin;
+                line-height: 1.6;
+                font-style: italic;
+                padding: 0px 20px;
+            }
+            .cuisine-button2 {
+                margin-top: 5px;
+                font-size: 12px; 
+                padding: 5px 10px;
+                display:inline-block;
+                width:200px;
+            }
+            /*Events banners' styling begins*/
+            .Ocations2,
+            .Ocations3 {
+                height: auto; 
+                background-size: cover;
+            }
+            .Ocations-content2,
+            .Ocations-content3 {
+                width: 80%; 
+                padding: 20px; 
+            }
+            .Ocations-content2 h1,
+            .Ocations-content3 h1 {
+                font-size: 5vmin;
+                margin-bottom: 30px; 
+            }
+            .Ocations-content2 p,
+            .Ocations-content3 p {
+                font-size: 3vmin;
+                white-space: normal;
+            }
+            /*Restaurants page's styling ends*/
+
+            /*Bookin page's styling begins*/
+            fieldset {
+                margin-top:20px;
+                padding: 5px;
+                width:50%;
+                margin-right: -10px; 
+                max-height: 575px;
+                margin-left:-10px;
+            }
+            legend {
+                font-size: 25px;
+                font-weight: bold;
+                color: #4d4e4f;
+                margin-bottom:20px;
+            }
+        }
+            /*Booking page's styling ends*/
+
+                        
+            /*References*/
+    
+            /*Kayak Miami Beach image (2023) Booking.com. Available at: https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fus%2Fkayak-miami-beach.html&amp;psig=AOvVaw2StAZPeM6eBoZ0bPvZYhAh&amp;ust=1694365867597000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBAQjhxqFwoTCNjP9pSDnoEDFQAAAAAdAAAAABAD (Accessed: 16 July 2023).*/
+            /*Heritance Hotels & Resorts. (n.d.). Hotel Gift Vouchers in Sri Lanka | Heritance Hotels | Flexible Hotel Stay. [online] Available at: https://vouchers.heritancehotels.com/ [Accessed 9 Sep. 2023].*/
+            /*Ocean Cliff Hotel Negril. (n.d.). Ocean Spa at Ocean Cliff Hotel | Negril, Jamaica Spa Retreat. [online] Available at: https://oceancliffhotel.com/ocean-cliff-spa/ [Accessed 9 Sep. 2023].*/
+            /*Unsplash (2022). Photo by Eugene Deshko on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/VJIw9ricd3g [Accessed 9 Sep. 2023].*/
+            /*uniqhotels.com. (n.d.). Alpin Panorama Hotel Hubertus - Epic Sky Pool. [online] Available at: https://www.uniqhotels.com/alpin-panorama-hotel-hubertus [Accessed 9 Sep. 2023].*/
+            /*Expert, T.L.T. (2018). Top 10 best city hotels in the world. [online] the Luxury Travel Expert. Available at: https://theluxurytravelexpert.com/2018/03/26/top-10-best-city-hotels-world/ [Accessed 9 Sep. 2023].*/
+            /*Andrew Brownsword Hotels. (n.d.). Locations — Andrew Brownsword Hotels - AA Hotel Group of the Year 2017-18. [online] Available at: https://www.brownswordhotels.co.uk/locations [Accessed 9 Sep. 2023].*/
+            /*www.jetwinghotels.com. (n.d.). Location. [online] Available at: https://www.jetwinghotels.com/jetwingyala/yala-national-park-hotels/ [Accessed 9 Sep. 2023].*/
+            /*www.jetwinghotels.com. (n.d.). Hotel Offers. [online] Available at: https://www.jetwinghotels.com/hotel-offers/.*/
+            /*Wholistic Living Spa. (n.d.). Master Bedroom | Wholistic Living Space. [online] Available at: https://www.wholisticlivingspace.com/master-bedroom [Accessed 9 Sep. 2023].*/
+            /*Malik, M. (2021). High Protein Veg Dinner Recipes. [online] Food Fitness & Fun. Available at: https://www.foodfitnessnfun.com/high-protein-veg-dinner-recipes/ [Accessed 9 Sep. 2023].*/
+            /*Chasing Drones New Zealand. (n.d.). Safety Inspection. [online] Available at: https://chasingdrones.co.nz/pages/safety-inspection [Accessed 9 Sep. 2023].*/
+            /*Staff, E. (2022). 10 Interior Design Ideas For Lounge Bar 2022. [online] DM Interior Studio. Available at: https://dminteriors.lk/interior-design-ideas-for-lounge-bar/ [Accessed 9 Sep. 2023].*/
+            /*Greater Miami & Miami Beach. (n.d.). Kayak Miami Beach. [online] Available at: https://www.miamiandbeaches.com/l/hotels/kayak-miami-beach/5345 [Accessed 9 Sep. 2023].*/
+            /*Greater Miami & Miami Beach. (n.d.). Kayak Miami Beach. [online] Available at: https://www.miamiandbeaches.com/l/hotels/kayak-miami-beach/5345 [Accessed 9 Sep. 2023].*/
+            /*Sandy Beach Trips. (n.d.). Beach Wedding. [online] Available at: https://www.sandybeachtrips.com/the-complete-guide-to-saying-i-do-in-the-maldives/engin-akyurt-mene7ockq4w-unsplash/ [Accessed 9 Sep. 2023].*/
+
+
+            /*www.discoverlosangeles.com. (n.d.). Wake Up in West Hollywood | Discover Los Angeles. [online] Available at: https://www.discoverlosangeles.com/hotels/wake-up-in-west-hollywood [Accessed 9 Sep. 2023].*/
+            /*Hotel Park City. (n.d.). Hotel Park City | A Premier Utah Hotel Destination. [online] Available at: https://www.hotelparkcity.com/ [Accessed 9 Sep. 2023].*/
+            /*SkyscraperCity Forum. (2022). Bandar Lampung - Indonesia. [online] Available at: https://www.skyscrapercity.com/threads/bandar-lampung-indonesia.2302725/ [Accessed 9 Sep. 2023].*/
+            /*Houstonia Magazine. (n.d.). The 5-Star Resort in the Middle of the Jungle. [online] Available at: https://www.houstoniamag.com/travel-and-outdoors/2014/07/the-5-star-resort-in-the-middle-of-the-jungle-june-2014 [Accessed 9 Sep. 2023].*/
+            /*www.jetwinghotels.com. (n.d.). Gallery. [online] Available at: https://www.jetwinghotels.com/jetwingkandygallery/gallery/ [Accessed 9 Sep. 2023].*/
+            /*www.yalasafariholidays.com. (n.d.). Jetwing Yala | Updated Rates 2022. [online] Available at: https://www.yalasafariholidays.com/accomadation.php?id=Jetwing_Yala [Accessed 9 Sep. 2023].*/
+            /*www.chanalai.com. (n.d.). Chanalai Hillside Resort | Hotel Phuket | HOMEPAGE. [online] Available at: https://www.chanalai.com/en/hillside-resort-home.html [Accessed 9 Sep. 2023].*/
+
+
+            /*Roger Osbaldiston. (2020). Passion, Vision, Action. [online] Available at: https://rogerosbaldiston.com/articles/2020/8/11/passion-vision-action [Accessed 9 Sep. 2023].*/
+            /*Unsplash (2017). Photo by Jakob Owens on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/CNmVDfHIkxs [Accessed 9 Sep. 2023].*/
+            /*pxhere.com. (n.d.). Free Images : sea, vehicle, spray, sailing, jetski, sports, boating, windsurfing, watercraft, motorsport, water sport, jet ski, wind wave, surfing equipment and supplies, powerboating, personal water craft, f1 powerboat racing 4582x3055 - - 151016 - Free stock photos - PxHere. [online] Available at: https://pxhere.com/en/photo/151016 [Accessed 9 Sep. 2023].*/
+            /*www.villamimpiubud.com. (n.d.). Bali :: villamimpiubud.com. [online] Available at: https://www.villamimpiubud.com/en/restaurant/ [Accessed 9 Sep. 2023].*/
+
+            /*Lawrence, K. (2023). This Swanky Fine Dining Restaurant In Arizona Is Marvelously Moody. [online] OnlyInYourState®. Available at: https://www.onlyinyourstate.com/arizona/marvelously-moody-restaurant-az/ [Accessed 9 Sep. 2023].*/
+            /*Rathnayake, Z. (2023). Nuga Gama. [online] SilverKris. Available at: https://www.silverkris.com/guide/sri-lanka/cmb/eat-colombo/nuga-gama/ [Accessed 9 Sep. 2023].*/
+            /*Anon, (n.d.). Weddings & Honeymoon. [online] Available at: https://www.lindosgrand.com/weddings-honeymoon/ [Accessed 9 Sep. 2023].*/
+            /*Kadence. (n.d.). Business to Business Market Research Agency | Kadence Int’l. [online] Available at: https://kadence.com/sector/b2b/ [Accessed 9 Sep. 2023].*/
+            /*BizBash. (2022). New Venues in Seattle for Spring 2022 Meetings and Events. [online] Available at: https://www.bizbash.com/venues-destinations/united-states/seattle/media-gallery/22184660/new-venues-in-seattle-for-spring-2022-meetings-and-events [Accessed 9 Sep. 2023].*/
+
+
+            /*Fine Art America. (n.d.). The Gunwale Of A Sailboat by George Platt Lynes. [online] Available at: https://fineartamerica.com/featured/the-gunwale-of-a-sailboat-george-platt-lynes.html [Accessed 9 Sep. 2023].*/

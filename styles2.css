@@ -1,0 +1,417 @@
+/*Weddings page's styling begins*/
+body{
+    background-color:#D8D9DA;
+    font-family:"Trirong", serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}.menubar {
+    background-color: #272829;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position:relative;
+    z-index:2;
+}
+.logo {
+    color: #F0F0F0;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.menubar ul {
+    list-style: none;
+    display: flex;
+}
+.menubar ul li {
+    padding: 10px 20px;
+    position:relative;
+}
+.menubar ul li a {
+    color: #F0F0F0;
+    text-decoration: none;
+    font-size: 18px;
+}
+.menubar ul li.active a {
+    font-weight: bold;
+    text-decoration: underline; 
+}
+.dropdown-menu{
+    display:none;
+}
+.menubar ul li:hover .dropdown-menu{
+    display:block;
+    position:absolute;
+    left:0;
+    top:100%;
+    background-color: #272829;
+}
+.dropdown-menu ul{
+    display:block;
+    margin:10px;
+}
+.dropdown-menu ul li{
+    width:150px;
+    padding:10px;
+}
+.menubar ul li.active .dropdown-menu ul li a.inactive {
+    color:#F0F0F0; 
+    text-decoration: none;
+    font-weight: normal;
+}
+/*Hero section's styling begins*/
+.hero {
+    position: relative;
+    z-index:1;
+    width: 100%;
+    height: 100vh;
+}
+.hero-image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); 
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:#F0F0F0;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.hero-content p {
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+button{
+    display:inline-block;
+    background-color:#272829;
+    border:none;
+    padding:8px 15px;
+    width:200px;
+    color:#F5F5F5;
+    text-align:center;
+}
+/*Introduction's styling begins*/
+.introduction {
+    padding: 80px 0;
+    background-color: #F0F0F0;
+    text-align: center;
+}
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.intro-content h2 {
+    font-size: 35px;
+    color:#4d4e4f;
+    margin-bottom: 20px;
+}
+.H1{
+    width:150px;
+    height:4px;
+    background:#331D2C;
+    margin:10px auto;
+    border-radius:5px;
+}
+.intro-content p {
+    font-size: 20px;
+    font-style:italic;
+    color:#272829;
+    line-height: 1.6;
+}
+/*Venues section's styling begins*/
+.wedding-venues {
+    padding: 80px 0;
+    text-align: center;
+}
+.section-heading {
+    font-size: 40px;
+    color:#4d4e4f;
+    margin-bottom: 40px;
+}
+.H2{
+    width:250px;
+    height:4px;
+    background:#331D2C;
+    margin:10px auto;
+    border-radius:5px;
+}
+.venue-card {
+    background-color: #F0F0F0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    max-width:100%;
+}
+.venue-card img {
+    max-width:80%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.venue-card h3 {
+    font-size: 30px;
+    color: #272829;
+    margin-bottom: 10px;
+}
+.venue-card p {
+    font-size: 20px;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+button{
+    display:inline-block;
+    background-color:#272829;
+    border:none;
+    padding:8px 15px;
+    width:200px;
+    color:#F5F5F5;
+    text-align:center;
+}
+/*Gallery's styling begins*/
+.gallery {
+    text-align: center;
+    margin: 20px;
+}
+.gallery h2 {
+    color: #4d4e4f;
+    font-style: italic;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+.H3 {
+    position: relative; 
+}
+.H3::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 4px;
+    background-color: #331D2C;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.column {
+    flex: 33.33%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.column img {
+    width:100%;
+    height:100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+/*Footer area's styling begins*/
+.footer{
+    background:#272829;
+    color:#F0F0F0;
+    padding:20px;
+    text-align:center;
+}
+.footer-content{
+    max-width:800px;
+    margin:0 auto;
+    padding:0px 10px;
+}
+.footer{
+    background:#272829;
+    color:#F0F0F0;
+    padding:20px;
+    text-align:center;
+}
+.footer-content{
+    max-width:800px;
+    margin:0 auto;
+    padding:0px 10px;
+}
+.footer-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+.footer-column{
+    flex-basis:40%;
+    text-align:left;
+    margin:0 10px;
+}
+.footer h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+.footer p{
+    font-size:14px;
+    line-height:1.5;
+}
+.footer i{
+    font-size:24px;
+    margin-right:5px;
+}
+.footer a{
+    color:#F0F0F0;
+    text-decoration:none;
+}
+@media screen and (max-width: 800px) {
+    .menubar {
+        height: auto;
+        flex-direction: row;
+        padding: 20px;
+    }
+.logo {
+        margin-right: 0;
+        margin-bottom: 10px; 
+    }
+.menubar ul {
+        flex-direction: row;
+        align-items: center;
+    }
+    .menubar ul li {
+        padding: 10px 12px;
+        text-align: center;
+        position: relative;
+        margin: 0 -8px;
+    }
+    .menubar ul li a {
+        font-size: 11.5px;
+    }  
+    .dropdown-menu ul li {
+        display: flex; /*flexbox to align text and icon horizontally */
+        align-items: center;
+        justify-content: space-between; /* Push the icon to the right */
+        width: 100%; /* Make the dropdown items full width */
+        padding: 10px;
+        text-align: center;
+    }
+    /*Hero section's styling begins*/
+    .hero-content h1 {
+        font-size: 8vmin;
+        margin-bottom: 20px;
+    }
+    .hero-content p {
+        font-size: 4vmin; 
+        margin-bottom: 30px;
+    }
+    button {
+        margin-top: 20px; 
+        font-size: 12px;
+        padding: 5px 10px; 
+        display:inline-block;
+        width: 200px; /
+    }
+    /*Introduction's styling begins*/
+    .intro-content {
+        padding: 0 20px; 
+    }
+    .intro-content h2 {
+        font-size: 28px; 
+    }
+    .intro-content p {
+        font-size: 18px; 
+    }
+    /*Venues section's styling begins*/
+    .wedding-venues {
+        padding: 40px 0; 
+    }
+    .section-heading {
+        font-size:7vmin; 
+        margin-bottom: 20px; 
+    }
+    .H2 {
+        width: 150px; 
+    }
+    .venue-card {
+        margin: 10px; 
+    }
+    .venue-card h3 {
+        font-size: 20px; 
+        margin-bottom: 8px; 
+    }
+    .venue-card p {
+        font-size: 14px; 
+        margin-bottom: 20px; 
+    }
+    /*Gallery's styling begins*/
+    .gallery h2 {
+        font-size: 7vmin; 
+        margin-bottom: 20px; 
+    }
+    .H3::after {
+        width: 100px; 
+    }
+    .row {
+        margin-bottom: 10px; 
+    }
+    .column {
+        flex: 50%; /*column width for smaller screens */
+    }
+    /*Footer area's styling begins*/
+    .footer-content {
+        max-width: 100%; 
+        padding: 0 20px;
+    }
+    .footer-row {
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 10px;
+    } 
+    .footer-column {
+        flex-basis: 100%; 
+        text-align: center; 
+        margin: 0; 
+    }
+    .footer h3 {
+        font-size: 16px; 
+        margin-bottom: 5px; 
+    }
+    .footer p {
+        font-size: 12px; 
+        line-height: 1.4; 
+    }
+    .footer i {
+        font-size: 20px; 
+        margin-right: 5px; 
+    } 
+}
+
+/*Referencing*/
+
+/*Anon, (n.d.). Make Your Dream Destination Wedding a Reality – Caravan Travel & Tours. [online] Available at: https://caravantraveltours.com/make-your-dream-destination-wedding-a-reality/ [Accessed 9 Sep. 2023].*/
+/*Pinterest. (n.d.). Pin on wedding??????????????? [online] Available at: https://www.pinterest.com/pin/where-there-is-love-there-is-life--627689266835272871/ [Accessed 9 Sep. 2023].*/
+/*Taylor, K. (2022). What Are the First Stages of Planning a Wedding? [online] Holidappy. Available at: https://holidappy.com/party-planning/The-First-Stages-Of-Planning-A-Wedding [Accessed 9 Sep. 2023].*/
+/*www.hitched.co.uk. (n.d.). Wotton House. [online] Available at: https://www.hitched.co.uk/wedding-venues/wotton-house_4323.htm [Accessed 9 Sep. 2023].*/
+/*Booking.com. (n.d.). ★★★★ Wotton House, Dorking, UK. [online] Available at: https://www.booking.com/hotel/gb/wottonhouse.html [Accessed 9 Sep. 2023].*/
+/*www.hitched.co.uk. (n.d.). Wotton House. [online] Available at: https://www.hitched.co.uk/wedding-venues/wotton-house_4323.htm [Accessed 9 Sep. 2023].*/
+/*Nast, C. (2016). The Most Beautiful Wedding Venues in the U.S. [online] Condé Nast Traveler. Available at: https://www.cntraveler.com/galleries/2016-03-08/the-most-beautiful-wedding-venues-in-the-us [Accessed 9 Sep. 2023].*/
+/*{author} (n.d.). Wedding Venue | Wedding Reception Venues | Unique Wedding Venues. [online] caratsandcake.com. Available at: https://caratsandcake.com/articles/wedding-venue-the-hunt [Accessed 9 Sep. 2023].*/
+/*www.kbskiathoshotel.com. (n.d.). Skiathos Wedding Hotel | Weddings in Skiathos | KB Suites. [online] Available at: https://www.kbskiathoshotel.com/skiathos-weddings-hotel-kb/ [Accessed 9 Sep. 2023].*/
+
+
+
+
+
+
